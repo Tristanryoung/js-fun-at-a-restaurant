@@ -39,8 +39,8 @@ var isFavorite = true;
 // assign a boolean value to this variable. If "inStock" is less than 20, the
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
-var shouldOrderMore = (inStock<20) === true
-console.log(shouldOrderMore)
+var shouldOrderMore = (inStock<20) === true;
+console.log(shouldOrderMore);
 
 
 
@@ -52,14 +52,21 @@ console.log(shouldOrderMore)
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
 // 'We need to get some more [food].'
 
-
-
+if (inStock>=1) {
+    console.log(`I'm going to eat some ${food}`)
+} else {
+    console.log(`We need to get some more${food}`)
+} 
 
 // Express the following in code: If the variable "isFavorite" is true,
 // log the statement 'My favorite food is [food]!'. Otherwise, log the
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
-
+if (isFavorite===true) {
+    console.log(`My favorite food is ${food}`)
+} else {
+    console.log(`I recently ate ${food}`)
+}
 
 
 //------------------------- Arrays -------------------------//
@@ -67,17 +74,19 @@ console.log(shouldOrderMore)
 
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
-
+var vegetables = ['Broccoli', 'Carrot', 'Cucumber', 'Tomato', 'Asparagus'];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
+console.log(vegetables[2]);
 
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
-
+var fruits = [`Banana`, `Watermelon`, `Pineapple`, `Strawberry`, `Guava`, `Blueberry`, `Mango`];
 
 // Write the code to access the 5th element of the array, using bracket notation.
+console.log(fruits[4]);
 
 
 //------------------------- Objects -------------------------//
