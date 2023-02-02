@@ -15,11 +15,11 @@ function createMenuItem() {
 }
 // console.log(createMenuItem());
 
-function addIngredients(name) {
-  var ingredients = ['Cheese'] 
-  return ingredients
+function addIngredients(addFood, ingredients) {
+  if (!ingredients.includes(addFood)) {
+    ingredients.push(addFood)
+  }
 }
-console.log(addIngredients());
 
 
 
