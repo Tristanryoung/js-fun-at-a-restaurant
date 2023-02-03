@@ -21,13 +21,22 @@ function addIngredients(addFood, ingredients) {
   }
 }
 
+function formatPrice(formattedPrice) {
+  var menuItem = {
+    name: 'French Toast',
+    price: formattedPrice,
+    type: 'breakfast'
+  }
+    return  '$'+formattedPrice
+} 
 
+console.log(formatPrice(10.99))
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
