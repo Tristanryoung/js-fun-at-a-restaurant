@@ -31,8 +31,13 @@ function decreasePrice(initialPrice) {
 }
 // console.log(decreasePrice(6.00))
 
-function createRecipe() {
-
+function createRecipe(title, ingredients, type) {
+  var recipe = {
+   title: title,
+   ingredients: ingredients,
+  type: type
+  }
+  return recipe
 }
 
 module.exports = {
