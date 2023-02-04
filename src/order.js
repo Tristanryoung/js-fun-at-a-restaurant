@@ -25,12 +25,18 @@ function refundOrder(order, array) {
     return itemList.join(', ')
   }
 
-  function searchOrder(order, array) {
+  function searchOrder(array, food) {
+    var orderExists = false
     for(var i = 0; i < array.length; i++) {
-    if(array[i].item === order) {
+      if(array[i].item === food) {
+        orderExists = true
+      } 
+      }
+      return orderExists
     }
-    }
-  }
+
+    
+
 
 
 
