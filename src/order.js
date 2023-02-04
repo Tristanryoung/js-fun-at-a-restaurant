@@ -17,12 +17,27 @@ function refundOrder(order, array) {
   // console.log(refundOrder(2893, deliveryOrders))
  
 
+  function listItems(array) {
+    var itemList = [];
+    for(var i = 0; i < array.length; i++) {
+      itemList.push(array[i].item)
+    }
+    return itemList.join(', ')
+  }
+
+  function searchOrder(order, array) {
+    for(var i = 0; i < array.length; i++) {
+    if(array[i].item === order) {
+    }
+    }
+  }
+
 
 
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
-  // searchOrder
+  listItems,
+  searchOrder
 }
