@@ -26,13 +26,21 @@ function addMenuItem(pizzaRestaurant, menuItem) {
   } else if(menuItem.type === "dinner" && !pizzaRestaurant.menus.dinner.includes(menuItem)) {
     pizzaRestaurant.menus.dinner.push(menuItem)
   }
-  console.log('bananas', pizzaRestaurant.menus)
+  // console.log('menu arrays', pizzaRestaurant.menus)
 }
 
+function removeMenuItem(pizzaRestaurant, menuItem, type) {
 
+  for (i = 0; i < pizzaRestaurant.menus[type].length; i++) {
+    if (pizzaRestaurant.menus[type][i].menuItem === menuItem) {
+      pizzaRestaurant.menus[type].splice([i], 1)
+    } 
+    return `No one is eating our ${menuItem} - it has been removed from the dinner menu!`
+  }
+}
 
 module.exports = {
   createRestaurant, 
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem
 }
