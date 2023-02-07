@@ -30,13 +30,17 @@ function addMenuItem(pizzaRestaurant, menuItem) {
 }
 
 function removeMenuItem(pizzaRestaurant, menuItem, type) {
-
+  // if(pizzaRestaurant.menus[type] === "breakfast") {
+  //   pizzaRestaurant.menus[type].shift(menuItem)
+  // }
+  console.log('line 37', pizzaRestaurant.menus[type])
+  
   for (i = 0; i < pizzaRestaurant.menus[type].length; i++) {
-    if (pizzaRestaurant.menus[type][i].menuItem === menuItem) {
+    if (pizzaRestaurant.menus[type]) {
       pizzaRestaurant.menus[type].splice([i], 1)
     } 
-    return `No one is eating our ${menuItem} - it has been removed from the dinner menu!`
-  }
+    return `No one is eating our ${menuItem} - it has been removed from the ${type} menu!`
+}
 }
 
 module.exports = {
